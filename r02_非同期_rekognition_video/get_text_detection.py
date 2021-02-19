@@ -19,12 +19,15 @@ def main():
             detected_text = text_detection['TextDetection']
 
             text = detected_text['DetectedText']
+
+            detected_type = detected_text['Type']  # LINE | WORD
+
             confidence = detected_text['Confidence']
             bounding_box = detected_text['Geometry']['BoundingBox']
             width, height, left, top = bounding_box['Width'], bounding_box['Height'], bounding_box['Left'], \
                                        bounding_box['Top']
 
-            print(f'{timestamp:04d}ms,{text},{confidence:.3f},{width},{height},{left},{top}')
+            print(f'{timestamp:04d}ms,{detected_type},{text},{confidence:.3f},{width},{height},{left},{top}')
 
 
 if __name__ == '__main__':
