@@ -1,11 +1,8 @@
-# Cloud9サンプルコード
+# Rekognition ビデオのテキスト検出
 
-## `boto3` のインストール
-Cloud9のターミナルで下記のコマンドを実行してください。
+## 参考
 
-```
-sudo pip3 install boto3
-```
+- [保存済みビデオ内のテキストの検出 - Amazon Rekognition](https://docs.aws.amazon.com/ja_jp/rekognition/latest/dg/text-detecting-video-procedure.html)
 
 ## 使い方
 
