@@ -1,10 +1,11 @@
 from pprint import pprint
 
 import boto3
+from mypy_boto3_comprehend import ComprehendClient
 
 
 def main():
-    client = boto3.client('comprehend', region_name='ap-northeast-1')
+    client: ComprehendClient = boto3.client('comprehend', region_name='ap-northeast-1')
 
     text = """
         大人になって、新しいことをしっかり学ぶ機会を作ることはなかなか難しいことだと考えております。

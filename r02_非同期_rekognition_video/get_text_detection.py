@@ -1,8 +1,9 @@
 import boto3
+from mypy_boto3_rekognition import RekognitionClient
 
 
 def main():
-    rekognition = boto3.client('rekognition')
+    rekognition: RekognitionClient = boto3.client('rekognition')
 
     job_id = 'YOUR_JOB_ID'
 

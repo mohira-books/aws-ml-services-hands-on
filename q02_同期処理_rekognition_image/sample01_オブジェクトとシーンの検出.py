@@ -2,10 +2,11 @@ from pathlib import Path
 from pprint import pprint
 
 import boto3
+from mypy_boto3_rekognition import RekognitionClient
 
 
 def main():
-    client = boto3.client('rekognition', region_name='ap-northeast-1')
+    client: RekognitionClient = boto3.client('rekognition', region_name='ap-northeast-1')
 
     image_file_path = Path(__file__).parent / 'image01.jpg'
 

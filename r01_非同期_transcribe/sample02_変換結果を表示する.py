@@ -2,9 +2,10 @@ import textwrap
 
 import boto3
 import requests
+from mypy_boto3_transcribe import TranscribeServiceClient
 
 
-def display_transcript(transcribe_job_response):
+def display_transcript(transcribe_job_response: dict) -> None:
     transcript_file_url = transcribe_job_response['TranscriptionJob']['Transcript']['TranscriptFileUri']
 
     results = requests.get(transcript_file_url).json()['results']
@@ -16,7 +17,7 @@ def display_transcript(transcribe_job_response):
 
 
 def main():
-    client = boto3.client('transcribe', region_name='ap-northeast-1')
+    client: TranscribeServiceClient = boto3.client('transcribe', region_name='ap-northeast-1')
 
     job_name = 'YOUR-JOB-NAME'
 

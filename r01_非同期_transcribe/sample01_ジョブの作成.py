@@ -2,10 +2,11 @@ from pprint import pprint
 
 import boto3
 from botocore.exceptions import ClientError
+from mypy_boto3_transcribe import TranscribeServiceClient
 
 
 def main():
-    client = boto3.client('transcribe', region_name='ap-northeast-1')
+    client: TranscribeServiceClient = boto3.client('transcribe', region_name='ap-northeast-1')
 
     job_name = 'YOUR-JOB-NAME'
 

@@ -1,10 +1,11 @@
 from pathlib import Path
 
 import boto3
+from mypy_boto3_rekognition import RekognitionClient
 
 
 def main():
-    rekognition = boto3.client('rekognition')
+    rekognition: RekognitionClient = boto3.client('rekognition')
 
     bucket_name = 'YOUR_JOB_BUCKET_NAME'
     movie_file = 'YOUR_OBJECT_KEY'  # オブジェクトのキー名
