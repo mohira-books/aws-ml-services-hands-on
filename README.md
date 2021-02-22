@@ -1,4 +1,9 @@
 # AWSのMLサービスを使ってみよう
+AWSのMLサービスを体験するためのリポジトリです。
+
+素早く体験するために、AWS Cloud9 環境 での実行を想定しています(Credentialsの設定をする必要がないため)。
+
+しかし、[AWS SDK for Python | AWS](https://aws.amazon.com/jp/sdk-for-python/)の設定を行えば別の環境でも実行可能です。
 
 ## Cloud9でSDKを実行するための準備
 ### 1. IAMユーザーの作成とIAMポリシーのアタッチ
@@ -6,11 +11,18 @@
 - **ルートユーザーは使わないこと！**
 - 利用したいサービスごとに最小限のIAMポリシーを用意しましょう
 
-### 2. Cloud9環境の作成
+### 2. AWS SDK 利用のための設定
+
+- Cloud9環境の場合は特に設定しなくてもOKです
+-
+別の環境で実行する場合は、[Quickstart — Boto3 Docs](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html#configuration)
+を参考に設定をしてください
+
+### 3. Cloud9環境の作成
 
 - スペックはデフォルトでOKです
 
-### 3. すぐに動かすための手順
+### 4. すぐに動かすための手順
 
 ```
 # pip の upgrade
