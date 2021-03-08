@@ -148,7 +148,7 @@ def main():
 
     img = Image.open(img_file_path)
     response = tool.image_to_string(img,
-                                    lang='jpn',
+                                    lang='jpn_vert',
                                     # ここで言語設定を変えられる(`*.trainedata`が必要)
                                     builder=pyocr.builders.WordBoxBuilder(
                                         tesseract_layout=6))

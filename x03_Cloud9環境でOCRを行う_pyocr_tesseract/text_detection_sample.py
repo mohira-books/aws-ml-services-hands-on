@@ -23,7 +23,7 @@ def main():
 
     img = Image.open(img_file_path)
     response = tool.image_to_string(img,
-                                    lang='jpn',  # ここで言語設定を変えられる(`*.trainedata`が必要)
+                                    lang='jpn_vert',  # ここで言語設定を変えられる(言語ごとの `*.traineddata`が必要)
                                     builder=pyocr.builders.WordBoxBuilder(tesseract_layout=6))
 
     output_img = cv2.imread(img_file_path)
